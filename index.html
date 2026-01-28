@@ -34,8 +34,8 @@
     </script>
     <style>
         .hero-bg {
-            /* Clean URL for Background */
-            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.75)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            /* Путь к фоновому изображению: img/hero-bg.jpg */
+            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.75)), url('img/hero-bg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -115,7 +115,6 @@
                     </a>
                 </div>
 
-                <!-- Trust Indicators -->
                 <div class="mt-12 flex flex-wrap items-center gap-6 text-sm font-medium text-slate-500">
                     <div class="flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-lg">
                         <i class="fa-solid fa-star text-yellow-400"></i>
@@ -128,15 +127,14 @@
                 </div>
             </div>
 
-            <!-- Hero Image -->
+            <!-- Hero Image: img/main-clinic.jpg -->
             <div class="hidden md:block relative">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-medical-200 to-accent-200 rounded-full blur-3xl opacity-50"></div>
-                <!-- Clean URL for Hero Image -->
-                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                <img src="img/main-clinic.jpg" 
                      alt="Стоматология МикСтас" 
+                     onerror="this.src='https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80'"
                      class="relative rounded-3xl shadow-2xl border-4 border-white object-cover h-[500px] w-full transform -rotate-2 hover:rotate-0 transition duration-500">
                 
-                <!-- Floating Badge -->
                 <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
                     <div class="bg-medical-100 p-2 rounded-full text-medical-600">
                         <i class="fa-solid fa-percent"></i>
@@ -159,57 +157,37 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                <!-- Card 1 -->
-                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+                <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center cursor-pointer">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-tooth"></i>
                     </div>
                     <h3 class="font-bold text-slate-800 mb-1">Лечение зубов</h3>
                     <p class="text-xs text-slate-500">Кариес, пульпит</p>
-                </a>
+                </div>
 
-                <!-- Card 2 -->
-                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+                <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center cursor-pointer">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-teeth"></i>
                     </div>
                     <h3 class="font-bold text-slate-800 mb-1">Имплантация</h3>
                     <p class="text-xs text-slate-500">Восстановление под ключ</p>
-                </a>
+                </div>
 
-                <!-- Card 3 -->
-                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+                <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center cursor-pointer">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
                     <h3 class="font-bold text-slate-800 mb-1">Отбеливание</h3>
                     <p class="text-xs text-slate-500">Белоснежная улыбка</p>
-                </a>
+                </div>
 
-                <!-- Card 4 -->
-                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+                <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center cursor-pointer">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-child"></i>
                     </div>
                     <h3 class="font-bold text-slate-800 mb-1">Детская стоматология</h3>
                     <p class="text-xs text-slate-500">Лечение без слез</p>
-                </a>
-                 <!-- Card 5 -->
-                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
-                        <i class="fa-solid fa-x-ray"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Диагностика (КТ)</h3>
-                    <p class="text-xs text-slate-500">Снимок за 5 минут</p>
-                </a>
-                 <!-- Card 6 -->
-                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-800 mb-1">Лечение по ДМС</h3>
-                    <p class="text-xs text-slate-500">Работаем со страховыми</p>
-                </a>
+                </div>
             </div>
         </div>
     </section>
@@ -222,21 +200,16 @@
                     <h2 class="text-3xl font-bold text-slate-900 mb-2">Наши специалисты</h2>
                     <p class="text-slate-500">Опытные стоматологи, которые постоянно повышают квалификацию.</p>
                 </div>
-                <div class="flex gap-2">
-                    <button class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center hover:bg-white hover:shadow-md transition"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-slate-700 transition"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
             </div>
 
-            <!-- Horizontal Scroll Container -->
             <div class="flex overflow-x-auto pb-8 gap-6 scroll-hidden snap-x">
                 
-                <!-- Doctor 1: Иванова (Стоматолог-терапевт) -->
+                <!-- Doctor 1: img/doctor-ivanova.jpg -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
-                        <!-- Clean URL for Doctor 1 -->
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                        <img src="img/doctor-ivanova.jpg" 
                              alt="Иванова Анна Сергеевна" 
+                             onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
                             <i class="fa-solid fa-star text-yellow-400"></i> 4.9
@@ -259,12 +232,12 @@
                     </div>
                 </div>
 
-                <!-- Doctor 2: Смирнов (Хирург-имплантолог) -->
+                <!-- Doctor 2: img/doctor-smirnov.jpg -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
-                        <!-- Clean URL for Doctor 2 -->
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                        <img src="img/doctor-smirnov.jpg" 
                              alt="Смирнов Олег Петрович" 
+                             onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
                             <i class="fa-solid fa-star text-yellow-400"></i> 5.0
@@ -287,12 +260,12 @@
                     </div>
                 </div>
 
-                <!-- Doctor 3: Козлова (Детский стоматолог) -->
+                <!-- Doctor 3: img/doctor-kozlova.jpg -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
-                        <!-- Clean URL for Doctor 3 -->
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                        <img src="img/doctor-kozlova.jpg" 
                              alt="Козлова Елена Дмитриевна" 
+                             onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                          <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
                             <i class="fa-solid fa-star text-yellow-400"></i> 4.9
@@ -324,9 +297,13 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="grid grid-cols-2 gap-4">
-                    <!-- Clean URLs for equipment -->
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-2xl w-full h-48 object-cover mb-4 shadow-md hover:scale-105 transition">
-                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-2xl w-full h-48 object-cover mt-8 shadow-md hover:scale-105 transition">
+                    <!-- img/equipment-1.jpg и img/equipment-2.jpg -->
+                    <img src="img/equipment-1.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80'"
+                         class="rounded-2xl w-full h-48 object-cover mb-4 shadow-md hover:scale-105 transition">
+                    <img src="img/equipment-2.jpg" 
+                         onerror="this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80'"
+                         class="rounded-2xl w-full h-48 object-cover mt-8 shadow-md hover:scale-105 transition">
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-slate-900 mb-6">Комфорт, который лечит</h2>
@@ -363,20 +340,15 @@
     <!-- Bottom CTA -->
     <section class="py-20 bg-medical-900 text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-medical-500 rounded-full blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
-        
         <div class="container mx-auto px-4 text-center relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Запишитесь на консультацию</h2>
-            <p class="text-medical-100 mb-10 max-w-xl mx-auto text-lg">
-                Мы подберем удобное время в ближайшем к вам филиале в Екатеринбурге или Ревде.
-            </p>
-            
+            <p class="text-medical-100 mb-10 max-w-xl mx-auto text-lg">Мы подберем удобное время в ближайшем к вам филиале.</p>
             <form class="bg-white/10 backdrop-blur-sm p-2 rounded-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-2 border border-white/10" onsubmit="event.preventDefault(); alert('Спасибо! Это демо-форма.');">
                 <input type="tel" placeholder="+7 (___) ___-__-__" class="flex-1 bg-transparent border-0 text-white placeholder-medical-200 px-6 py-4 focus:ring-0 text-lg outline-none" required>
                 <button type="submit" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg w-full md:w-auto">
                     Подобрать время
                 </button>
             </form>
-            <p class="mt-4 text-xs text-medical-300">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
         </div>
     </section>
 
@@ -389,59 +361,47 @@
                         <i class="fa-solid fa-tooth text-medical-500"></i>
                         <span class="text-xl font-bold">МикСтас</span>
                     </div>
-                    <p class="text-sm mb-4">Сеть стоматологических клиник<br>в Екатеринбурге и Ревде</p>
+                    <p class="text-sm">Сеть стоматологических клиник</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Филиалы</h4>
                     <ul class="space-y-2 text-sm">
                         <li>Екатеринбург, ул. Ст. Разина, 58</li>
-                        <li>Екатеринбург, ул. Луначарского, 194</li>
                         <li>г. Ревда, ул. К. Либкнехта, 7А</li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-4">Контакты</h4>
-                    <a href="tel:+73432273636" class="text-white hover:text-medical-500 transition block mb-2 font-bold">+7 (343) 227-36-36</a>
-                    <a href="mailto:info@mikstas.ru" class="hover:text-white transition text-sm">info@mikstas.ru</a>
+                    <a href="tel:+73432273636" class="text-white font-bold block mb-2">+7 (343) 227-36-36</a>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Мы в соцсетях</h4>
+                    <h4 class="text-white font-bold mb-4">Соцсети</h4>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-medical-600 hover:text-white transition"><i class="fa-brands fa-vk"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-medical-600 transition"><i class="fa-brands fa-vk"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-slate-800 pt-8 text-xs text-center footer-copyright">
-                &copy; 2026 Концепт редизайна. Разработка: <a href="https://t.me/Alenka_Chizh" target="_blank" class="hover:text-white transition underline">web-update-view</a>
+            <div class="border-t border-slate-800 pt-8 text-xs text-center">
+                &copy; 2026 Концепт редизайна. Разработка: web-update-view
             </div>
         </div>
     </footer>
 
     <!-- Booking Modal -->
     <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 md:p-8 animate-in fade-in zoom-in duration-200">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2">Запись на прием</h3>
-            <p class="text-slate-500 mb-6 text-sm">Оставьте номер, мы перезвоним в течение 5 минут для выбора удобного филиала.</p>
-            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal(); alert('Заявка отправлена! Менеджер свяжется с вами.');">
-                <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1">Как к вам обращаться?</label>
-                    <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-medical-500 outline-none transition" placeholder="Иван Иванов">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1">Телефон</label>
-                    <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-medical-500 outline-none transition" placeholder="+7 (999) 000-00-00" required>
-                </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Запись на прием</h3>
+            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal(); alert('Заявка отправлена!');">
+                <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200" placeholder="Ваше имя">
+                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200" placeholder="+7 (999) 000-00-00" required>
                 <div id="doctorField" class="hidden">
-                    <label class="block text-sm font-medium text-slate-700 mb-1">К врачу</label>
-                    <input type="text" id="doctorInput" class="w-full px-4 py-3 rounded-lg bg-slate-100 border-none text-slate-500" readonly>
+                    <input type="text" id="doctorInput" class="w-full px-4 py-3 rounded-lg bg-slate-100" readonly>
                 </div>
-                <button type="submit" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
-                    Записаться
-                </button>
+                <button type="submit" class="w-full bg-medical-600 text-white font-bold py-3.5 rounded-xl">Записаться</button>
             </form>
         </div>
     </div>
@@ -451,10 +411,8 @@
             const modal = document.getElementById('bookingModal');
             const doctorField = document.getElementById('doctorField');
             const doctorInput = document.getElementById('doctorInput');
-
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-
             if (doctorName) {
                 doctorField.classList.remove('hidden');
                 doctorInput.value = doctorName;
@@ -463,16 +421,11 @@
                 doctorInput.value = '';
             }
         }
-
         function closeModal() {
             const modal = document.getElementById('bookingModal');
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") closeModal();
-        });
     </script>
 </body>
 </html>
