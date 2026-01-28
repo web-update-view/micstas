@@ -19,12 +19,12 @@
                         medical: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
-                            500: '#0ea5e9', // Sky blue
+                            500: '#0ea5e9',
                             600: '#0284c7',
                             900: '#0c4a6e',
                         },
                         accent: {
-                            500: '#10b981', // Emerald
+                            500: '#10b981',
                             600: '#059669',
                         }
                     }
@@ -34,7 +34,7 @@
     </script>
     <style>
         .hero-bg {
-            /* Фоновое изображение через локальный файл */
+            background-color: #f8fafc; /* Запасной цвет фона */
             background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.75)), url('hero-bg.jpg');
             background-size: cover;
             background-position: center;
@@ -50,23 +50,23 @@
 </head>
 <body class="font-sans text-slate-800 antialiased bg-slate-50">
 
-    <!-- Дисклеймер -->
+    <!-- Disclaimer Banner -->
     <div class="bg-slate-900 text-slate-400 py-2.5 text-center text-xs font-medium relative z-[60]">
         Концепт редизайна для стоматологии МикСтас. Не является официальным сайтом.
     </div>
 
-    <!-- Шапка -->
+    <!-- Sticky Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <!-- Логотип -->
+            <!-- Logo -->
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-medical-500 rounded-lg flex items-center justify-center text-white shadow-md shadow-medical-200">
+                <div class="w-8 h-8 bg-medical-500 rounded-lg flex items-center justify-center text-white shadow-md">
                     <i class="fa-solid fa-tooth font-bold"></i>
                 </div>
                 <span class="text-xl font-bold text-slate-900 tracking-tight">Мик<span class="text-medical-500">Стас</span></span>
             </div>
 
-            <!-- Навигация -->
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
                 <a href="#services" class="hover:text-medical-600 transition">Услуги</a>
                 <a href="#doctors" class="hover:text-medical-600 transition">Врачи</a>
@@ -74,13 +74,13 @@
                 <a href="#contacts" class="hover:text-medical-600 transition">Контакты</a>
             </nav>
 
-            <!-- Кнопки -->
+            <!-- Actions -->
             <div class="flex items-center gap-4">
                 <a href="tel:+73432273636" class="hidden lg:flex flex-col items-end mr-2">
                     <span class="text-xs text-slate-400">Екатеринбург и Ревда</span>
                     <span class="font-bold text-slate-800 hover:text-medical-600 transition">+7 (343) 227-36-36</span>
                 </a>
-                <button onclick="openModal()" class="bg-medical-600 hover:bg-medical-700 text-white px-5 py-2.5 rounded-full font-medium text-sm transition shadow-lg shadow-medical-500/30 flex items-center gap-2">
+                <button onclick="openModal()" class="bg-medical-600 hover:bg-medical-700 text-white px-5 py-2.5 rounded-full font-medium text-sm transition shadow-lg flex items-center gap-2">
                     <i class="fa-regular fa-calendar-check"></i>
                     <span class="hidden sm:inline">Записаться</span>
                     <span class="sm:hidden">Запись</span>
@@ -89,7 +89,7 @@
         </div>
     </header>
 
-    <!-- Главный экран -->
+    <!-- Hero Section -->
     <section class="hero-bg min-h-[600px] flex items-center relative overflow-hidden">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center pt-10 pb-20">
             <div class="max-w-2xl relative z-10">
@@ -107,7 +107,7 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="openModal()" class="bg-medical-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-medical-700 transition shadow-xl shadow-medical-500/20 text-center">
+                    <button onclick="openModal()" class="bg-medical-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-medical-700 transition shadow-xl text-center">
                         Записаться на прием
                     </button>
                     <a href="#services" class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
@@ -115,7 +115,6 @@
                     </a>
                 </div>
 
-                <!-- Индикаторы доверия -->
                 <div class="mt-12 flex flex-wrap items-center gap-6 text-sm font-medium text-slate-500">
                     <div class="flex items-center gap-2 bg-white/60 px-3 py-1.5 rounded-lg">
                         <i class="fa-solid fa-star text-yellow-400"></i>
@@ -128,14 +127,14 @@
                 </div>
             </div>
 
-            <!-- Изображение клиники -->
+            <!-- Hero Image -->
             <div class="hidden md:block relative">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-medical-200 to-accent-200 rounded-full blur-3xl opacity-50"></div>
                 <img src="main-clinic.jpg" 
                      alt="Стоматология МикСтас" 
+                     onerror="this.src='https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80'"
                      class="relative rounded-3xl shadow-2xl border-4 border-white object-cover h-[500px] w-full transform -rotate-2 hover:rotate-0 transition duration-500">
                 
-                <!-- Плавающий бейдж -->
                 <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
                     <div class="bg-medical-100 p-2 rounded-full text-medical-600">
                         <i class="fa-solid fa-percent"></i>
@@ -149,7 +148,7 @@
         </div>
     </section>
 
-    <!-- Сетка услуг -->
+    <!-- Services -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -158,7 +157,6 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                <!-- Карточка 1 -->
                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-tooth"></i>
@@ -167,7 +165,6 @@
                     <p class="text-xs text-slate-500">Кариес, пульпит</p>
                 </a>
 
-                <!-- Карточка 2 -->
                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-teeth"></i>
@@ -176,7 +173,6 @@
                     <p class="text-xs text-slate-500">Восстановление под ключ</p>
                 </a>
 
-                <!-- Карточка 3 -->
                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -185,7 +181,6 @@
                     <p class="text-xs text-slate-500">Белоснежная улыбка</p>
                 </a>
 
-                <!-- Карточка 4 -->
                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-child"></i>
@@ -193,16 +188,16 @@
                     <h3 class="font-bold text-slate-800 mb-1">Детская стоматология</h3>
                     <p class="text-xs text-slate-500">Лечение без слез</p>
                 </a>
-                 <!-- Карточка 5 -->
-                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+
+                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-x-ray"></i>
                     </div>
                     <h3 class="font-bold text-slate-800 mb-1">Диагностика (КТ)</h3>
                     <p class="text-xs text-slate-500">Снимок за 5 минут</p>
                 </a>
-                 <!-- Карточка 6 -->
-                 <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
+
+                <a href="#" class="group p-6 rounded-2xl bg-slate-50 hover:bg-medical-50 border border-slate-100 hover:border-medical-200 transition duration-300 flex flex-col items-center text-center">
                     <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm text-medical-500 group-hover:scale-110 transition mb-4">
                         <i class="fa-solid fa-hand-holding-dollar"></i>
                     </div>
@@ -213,101 +208,57 @@
         </div>
     </section>
 
-    <!-- Секция врачей -->
+    <!-- Doctors -->
     <section id="doctors" class="py-20 bg-slate-50">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Наши специалисты</h2>
-                    <p class="text-slate-500">Опытные стоматологи, которые постоянно повышают квалификацию.</p>
-                </div>
-                <div class="flex gap-2">
-                    <button class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center hover:bg-white hover:shadow-md transition"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-slate-700 transition"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div>
-
-            <!-- Контейнер прокрутки -->
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Наши специалисты</h2>
             <div class="flex overflow-x-auto pb-8 gap-6 scroll-hidden snap-x">
                 
-                <!-- Врач 1: Иванова -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
                         <img src="doctor-ivanova.jpg" 
                              alt="Иванова Анна Сергеевна" 
+                             onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
-                            <i class="fa-solid fa-star text-yellow-400"></i> 4.9
-                        </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-semibold text-medical-600 mb-1 uppercase tracking-wide">Стоматолог-терапевт</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Иванова Анна Сергеевна</h3>
-                        <p class="text-sm text-slate-500 mb-4">Стаж 12 лет • Эстетика</p>
-                        
-                        <div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-400">Лечение кариеса</p>
-                                <p class="font-bold text-slate-900">от 3 500 ₽</p>
-                            </div>
-                            <button onclick="openModal('Иванова А.С.')" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
-                                Записаться
-                            </button>
-                        </div>
+                        <div class="text-xs font-semibold text-medical-600 mb-1">ТЕРАПЕВТ</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Иванова Анна Сергеевна</h3>
+                        <button onclick="openModal('Иванова А.С.')" class="w-full bg-slate-900 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
+                            Записаться
+                        </button>
                     </div>
                 </div>
 
-                <!-- Врач 2: Смирнов -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
                         <img src="doctor-smirnov.jpg" 
                              alt="Смирнов Олег Петрович" 
+                             onerror="this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
-                            <i class="fa-solid fa-star text-yellow-400"></i> 5.0
-                        </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-semibold text-medical-600 mb-1 uppercase tracking-wide">Хирург-имплантолог</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Смирнов Олег Петрович</h3>
-                        <p class="text-sm text-slate-500 mb-4">Стаж 15 лет • Удаление любой сложности</p>
-                        
-                        <div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-400">Консультация</p>
-                                <p class="font-bold text-slate-900">Бесплатно</p>
-                            </div>
-                            <button onclick="openModal('Смирнов О.П.')" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
-                                Записаться
-                            </button>
-                        </div>
+                        <div class="text-xs font-semibold text-medical-600 mb-1">ХИРУРГ</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Смирнов Олег Петрович</h3>
+                        <button onclick="openModal('Смирнов О.П.')" class="w-full bg-slate-900 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
+                            Записаться
+                        </button>
                     </div>
                 </div>
 
-                <!-- Врач 3: Козлова -->
                 <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition duration-300 snap-center border border-slate-100">
                     <div class="h-64 overflow-hidden relative group">
                         <img src="doctor-kozlova.jpg" 
                              alt="Козлова Елена Дмитриевна" 
+                             onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'"
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
-                            <i class="fa-solid fa-star text-yellow-400"></i> 4.9
-                        </div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-semibold text-medical-600 mb-1 uppercase tracking-wide">Детский стоматолог</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-1">Козлова Елена Дмитриевна</h3>
-                        <p class="text-sm text-slate-500 mb-4">Стаж 8 лет • Адаптивный прием</p>
-                        
-                        <div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100">
-                            <div>
-                                <p class="text-xs text-slate-400">Гигиена</p>
-                                <p class="font-bold text-slate-900">от 2 000 ₽</p>
-                            </div>
-                            <button onclick="openModal('Козлова Е.Д.')" class="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
-                                Записаться
-                            </button>
-                        </div>
+                        <div class="text-xs font-semibold text-medical-600 mb-1">ДЕТСКИЙ ВРАЧ</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">Козлова Елена Дмитриевна</h3>
+                        <button onclick="openModal('Козлова Е.Д.')" class="w-full bg-slate-900 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-medical-600 transition">
+                            Записаться
+                        </button>
                     </div>
                 </div>
 
@@ -315,38 +266,29 @@
         </div>
     </section>
 
-    <!-- Преимущества -->
-    <section class="py-20 bg-white">
+    <!-- Why Us (About Section) -->
+    <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="equipment-1.jpg" class="rounded-2xl w-full h-48 object-cover mb-4 shadow-md hover:scale-105 transition">
-                    <img src="equipment-2.jpg" class="rounded-2xl w-full h-48 object-cover mt-8 shadow-md hover:scale-105 transition">
+                    <img src="equipment-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80'" class="rounded-2xl w-full h-48 object-cover shadow-md">
+                    <img src="equipment-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80'" class="rounded-2xl w-full h-48 object-cover mt-8 shadow-md">
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-slate-900 mb-6">Комфорт, который лечит</h2>
-                    <p class="text-slate-500 mb-8">МикСтас — это стоматология без запаха «больницы». У нас светло, уютно и безопасно.</p>
-                    
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Рассрочка без переплат</h4>
-                                <p class="text-sm text-slate-500">Лечите зубы сейчас, платите потом. Оформление прямо в клинике.</p>
+                                <p class="text-sm text-slate-500">Лечите зубы сейчас, платите потом.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900">Собственный кабинет КТ</h4>
-                                <p class="text-sm text-slate-500">Снимки на Ст. Разина, 61А. Точная диагностика за 5 минут.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
+                            <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mt-0.5"><i class="fa-solid fa-check text-xs"></i></div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Гарантия на лечение</h4>
-                                <p class="text-sm text-slate-500">Мы уверены в качестве наших услуг и даем гарантию на все виды работ.</p>
+                                <p class="text-sm text-slate-500">Мы уверены в качестве всех видов работ.</p>
                             </div>
                         </li>
                     </ul>
@@ -355,86 +297,36 @@
         </div>
     </section>
 
-    <!-- Форма записи -->
-    <section class="py-20 bg-medical-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-medical-500 rounded-full blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
-        
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Запишитесь на консультацию</h2>
-            <p class="text-medical-100 mb-10 max-w-xl mx-auto text-lg">
-                Мы подберем удобное время в ближайшем к вам филиале в Екатеринбурге или Ревде.
-            </p>
-            
-            <form class="bg-white/10 backdrop-blur-sm p-2 rounded-2xl max-w-2xl mx-auto flex flex-col md:flex-row gap-2 border border-white/10" onsubmit="event.preventDefault(); alert('Спасибо! Это демо-форма.');">
-                <input type="tel" placeholder="+7 (___) ___-__-__" class="flex-1 bg-transparent border-0 text-white placeholder-medical-200 px-6 py-4 focus:ring-0 text-lg outline-none" required>
-                <button type="submit" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg w-full md:w-auto">
-                    Подобрать время
-                </button>
-            </form>
-            <p class="mt-4 text-xs text-medical-300">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
-        </div>
-    </section>
-
-    <!-- Футер -->
+    <!-- Footer -->
     <footer id="contacts" class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center gap-2 mb-4 text-white">
-                        <i class="fa-solid fa-tooth text-medical-500"></i>
-                        <span class="text-xl font-bold">МикСтас</span>
-                    </div>
-                    <p class="text-sm mb-4">Сеть стоматологических клиник<br>в Екатеринбурге и Ревде</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Филиалы</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li>Екатеринбург, ул. Ст. Разина, 58</li>
-                        <li>Екатеринбург, ул. Луначарского, 194</li>
-                        <li>г. Ревда, ул. К. Либкнехта, 7А</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Контакты</h4>
-                    <a href="tel:+73432273636" class="text-white hover:text-medical-500 transition block mb-2 font-bold">+7 (343) 227-36-36</a>
-                    <a href="mailto:info@mikstas.ru" class="hover:text-white transition text-sm">info@mikstas.ru</a>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Мы в соцсетях</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-medical-600 hover:text-white transition"><i class="fa-brands fa-vk"></i></a>
-                    </div>
-                </div>
+        <div class="container mx-auto px-4 text-center md:text-left grid md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-xl font-bold text-white mb-4 block">МикСтас</span>
+                <p class="text-sm">Екатеринбург и Ревда</p>
             </div>
-            <div class="border-t border-slate-800 pt-8 text-xs text-center footer-copyright">
-                &copy; 2026 Концепт редизайна. Разработка: <a href="https://t.me/Alenka_Chizh" target="_blank" class="hover:text-white transition underline">web-update-view</a>
+            <div>
+                <h4 class="text-white font-bold mb-4">Контакты</h4>
+                <a href="tel:+73432273636" class="text-white hover:text-medical-500 block mb-2">+7 (343) 227-36-36</a>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Соцсети</h4>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 inline-flex items-center justify-center hover:bg-medical-600 text-white transition"><i class="fa-brands fa-vk"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Модальное окно записи -->
-    <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 md:p-8 animate-in fade-in zoom-in duration-200">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2">Запись на прием</h3>
-            <p class="text-slate-500 mb-6 text-sm">Оставьте номер, мы перезвоним в течение 5 минут для выбора удобного филиала.</p>
-            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal(); alert('Заявка отправлена! Менеджер свяжется с вами.');">
-                <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1">Как к вам обращаться?</label>
-                    <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-medical-500 outline-none transition" placeholder="Иван Иванов">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-700 mb-1">Телефон</label>
-                    <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-medical-500 outline-none transition" placeholder="+7 (999) 000-00-00" required>
-                </div>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 animate-in fade-in zoom-in duration-200">
+            <h3 class="text-2xl font-bold text-slate-900 mb-4">Запись на прием</h3>
+            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal(); alert('Заявка отправлена!');">
+                <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 outline-none" placeholder="Ваше имя">
+                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 outline-none" placeholder="+7 (___) ___-__-__" required>
                 <div id="doctorField" class="hidden">
-                    <label class="block text-sm font-medium text-slate-700 mb-1">К врачу</label>
-                    <input type="text" id="doctorInput" class="w-full px-4 py-3 rounded-lg bg-slate-100 border-none text-slate-500" readonly>
+                    <input type="text" id="doctorInput" class="w-full px-4 py-3 rounded-lg bg-slate-100 border-none" readonly>
                 </div>
-                <button type="submit" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform active:scale-95">
+                <button type="submit" class="w-full bg-medical-600 hover:bg-medical-700 text-white font-bold py-4 rounded-xl shadow-lg transition">
                     Записаться
                 </button>
             </form>
@@ -446,10 +338,8 @@
             const modal = document.getElementById('bookingModal');
             const doctorField = document.getElementById('doctorField');
             const doctorInput = document.getElementById('doctorInput');
-
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-
             if (doctorName) {
                 doctorField.classList.remove('hidden');
                 doctorInput.value = doctorName;
@@ -458,16 +348,11 @@
                 doctorInput.value = '';
             }
         }
-
         function closeModal() {
             const modal = document.getElementById('bookingModal');
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") closeModal();
-        });
     </script>
 </body>
 </html>
